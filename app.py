@@ -9,7 +9,8 @@ from flask_cors import CORS  # Import CORS
 app = Flask(__name__)
 
 # Enable CORS for all routes
-CORS(app, resources={r"/*": {"origins": "https://el2-tools.vercel.app"}})  # Ganti dengan domain Vercel Anda
+CORS(app)  # You can pass additional parameters to configure CORS more specifically
+
 # Folder for uploaded files
 UPLOAD_FOLDER = 'uploads'
 if not os.path.exists(UPLOAD_FOLDER):
